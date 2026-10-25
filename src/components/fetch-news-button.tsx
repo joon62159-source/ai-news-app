@@ -6,6 +6,7 @@ import { useState, useTransition } from "react";
 type Result = {
   inserted: number;
   duplicates: number;
+  processed: number;
   errors: { feed: string; message: string }[];
 };
 
@@ -26,11 +27,10 @@ export function FetchNewsButton() {
       if (!res.ok) throw new Error(data.error ?? "요청에 실패했어요");
 
       const r = data as Result;
-      const failed = r.errors.map((e) => e.feed).join(", ");
       setMessage({
         text:
-          `새 기사 ${r.inserted}건` +
-          (failed ? ` · 실패한 피드: ${failed}` : ""),
+          `새 기사 ${r.inserted}건 · 번역·요약 ${r.processed}건` +
+          (r.errors.length > 0 ? ` · 실패 ${r.errors.length}건` : ""),
         error: r.errors.length > 0,
       });
       startTransition(() => router.refresh());

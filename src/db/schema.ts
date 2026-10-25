@@ -52,6 +52,8 @@ export const articles = pgTable(
     fetchedAt: timestamp("fetched_at", { withTimezone: true })
       .notNull()
       .defaultNow(),
+    // null = Claude 번역·요약·분류 전(titleKo/summaryKo는 원문 임시값). 실패한 기사는 다음 수집 때 재시도한다.
+    processedAt: timestamp("processed_at", { withTimezone: true }),
     notionPageId: text("notion_page_id"),
   },
   (t) => [

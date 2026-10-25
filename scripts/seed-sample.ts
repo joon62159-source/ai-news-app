@@ -116,6 +116,7 @@ const inserted = await db
       feedId: feedId.get(feed),
       categoryId: categoryId.get(category),
       publishedAt: new Date(publishedAt),
+      processedAt: new Date(),
     })),
   )
   .onConflictDoNothing()

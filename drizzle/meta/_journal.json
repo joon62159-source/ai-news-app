@@ -8,6 +8,13 @@
       "when": 1792832039605,
       "tag": "0000_cute_moira_mactaggert",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792894077403,
+      "tag": "0001_good_mojo",
+      "breakpoints": true
     }
   ]
 }

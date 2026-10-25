@@ -51,7 +51,7 @@ export function NewsCard({ article }: { article: NewsCardData }) {
       <h2 className="mt-3 line-clamp-2 break-keep text-lg font-semibold leading-snug text-slate-900 dark:text-slate-100">
         {article.titleKo}
       </h2>
-      <p className="mt-2 line-clamp-4 break-keep text-[15px] leading-7 text-slate-600 dark:text-slate-400">
+      <p className="mt-2 line-clamp-6 break-keep text-[15px] leading-7 text-slate-600 dark:text-slate-400">
         {article.summaryKo}
       </p>
 
