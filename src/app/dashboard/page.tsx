@@ -4,6 +4,7 @@ import { and, asc, desc, eq, isNull, sql } from "drizzle-orm";
 import { db } from "@/db";
 import { articles, categories, feeds } from "@/db/schema";
 import { CategoryBar } from "@/components/category-bar";
+import { FetchNewsButton } from "@/components/fetch-news-button";
 import { NewsCard } from "@/components/news-card";
 
 export const metadata = { title: "대시보드 · AI뉴스수집기" };
@@ -12,9 +13,12 @@ export default function DashboardPage(props: PageProps<"/dashboard">) {
   return (
     <main className="flex-1 bg-slate-50 dark:bg-slate-950">
       <div className="mx-auto w-full max-w-6xl space-y-6 px-4 py-6 sm:px-6">
-        <h1 className="text-lg font-bold tracking-tight text-slate-900 dark:text-slate-100">
-          AI뉴스수집기
-        </h1>
+        <div className="flex items-center justify-between gap-4">
+          <h1 className="text-lg font-bold tracking-tight text-slate-900 dark:text-slate-100">
+            AI뉴스수집기
+          </h1>
+          <FetchNewsButton />
+        </div>
         <Suspense fallback={<Skeleton />}>
           <Feed searchParams={props.searchParams} />
         </Suspense>
