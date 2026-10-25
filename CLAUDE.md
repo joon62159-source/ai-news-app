@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 프로젝트
 
-해외 AI 뉴스를 RSS로 수집해 Claude API로 한국어 번역·요약·분류하고, 카드로 보여주며 Notion에 저장하는 웹 앱. 요구사항·데이터 모델·구현 단계는 `PRD.md`가 기준이다(구현 단계 1~2 완료, 3단계 뉴스 가져오기 API부터 남음).
+해외 AI 뉴스를 RSS로 수집해 Claude API로 한국어 번역·요약·분류하고, 카드로 보여주며 Notion에 저장하는 웹 앱. 요구사항·데이터 모델·구현 단계는 `PRD.md`가 기준이다(구현 단계 1~2 완료, 3단계 뉴스 가져오기 API부터 남음). UI 작업 시에는 `ui.md`(Tailwind 기반 UI 가이드: 대시보드 레이아웃, 카테고리 바, 뉴스 카드 스타일)를 따른다.
 
 ## 명령어
 
