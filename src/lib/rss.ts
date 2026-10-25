@@ -12,7 +12,8 @@ const parser = new Parser({
   headers: { "User-Agent": "ainewscollector/1.0" },
 });
 
-const SUMMARY_MAX = 300;
+// Claude가 요약할 재료이므로 카드에 보이는 길이보다 넉넉하게 남긴다.
+const SUMMARY_MAX = 1000;
 
 // 추적 파라미터·해시를 제거해 같은 기사가 URL만 달라 중복 저장되는 것을 막는다.
 export function normalizeUrl(raw: string): string {
